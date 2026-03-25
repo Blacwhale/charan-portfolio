@@ -90,7 +90,8 @@ export default function App() {
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <a 
-              href="mailto:sricharanlrg@gmail.com?subject=Resume Request" 
+              href={`${import.meta.env.BASE_URL}Resume.pdf`}
+              download
               className={`hidden sm:flex items-center space-x-2 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500 border shadow-lg ${isDarkMode ? 'bg-accent-gold border-accent-gold text-navy-black hover:bg-transparent hover:text-accent-gold shadow-accent-gold/20' : 'bg-accent-indigo border-accent-indigo text-white hover:bg-transparent hover:text-accent-indigo shadow-accent-indigo/20'}`}
             >
               <FileText size={14} />
