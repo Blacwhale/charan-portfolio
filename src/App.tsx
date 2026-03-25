@@ -73,7 +73,7 @@ export default function App() {
             {['About', 'Skills', 'Projects', 'Experience', 'Education', 'Resume'].map((item) => (
               <a 
                 key={item} 
-                href={item === 'Resume' ? '/Resume.pdf' : `#${item.toLowerCase()}`}
+                href={item === 'Resume' ? `${import.meta.env.BASE_URL}Resume.pdf` : `#${item.toLowerCase()}`}
                 {...(item === 'Resume' ? { download: true } : {})}
                 className={`transition-colors duration-300 ${isDarkMode ? 'hover:text-accent-gold' : 'hover:text-accent-indigo'}`}
               >
@@ -123,7 +123,7 @@ export default function App() {
              <div className="flex justify-center items-center"></div>
              <div className="w-40 h-40 md:w-52 md:h-52 rounded-full border-2 border-yellow-500 overflow-hidden shadow-lg">
                 <img
-                  src="/profile.jpeg"
+                   src={`${import.meta.env.BASE_URL}profile.jpeg`}
                   alt="Sricharan L R G"
                   className="w-full h-full object-cover"
                     />
@@ -155,7 +155,7 @@ export default function App() {
               <motion.a 
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                href="/Resume.pdf"download
+                href={`${import.meta.env.BASE_URL}Resume.pdf`} download
                 className={`px-10 py-5 rounded-full font-bold uppercase tracking-[0.25em] text-[10px] transition-all duration-500 border-2 shadow-2xl ${isDarkMode? 'bg-accent-gold border-accent-gold text-navy-black hover:bg-transparent hover:text-accent-gold shadow-accent-gold/20': 'bg-accent-gold border-accent-gold text-navy-black hover:bg-transparent hover:text-accent-gold shadow-accent-gold/20'}`}
               >
                 Get Resume
